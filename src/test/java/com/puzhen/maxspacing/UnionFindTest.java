@@ -1,7 +1,6 @@
 package com.puzhen.maxspacing;
 
 import junit.framework.TestCase;
-import org.jgrapht.alg.util.UnionFind;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +17,7 @@ public class UnionFindTest extends TestCase {
         Set<Node> set = new HashSet<Node>();
         set.add(node1); set.add(node2);
 
-        MyUnionFind uf = new MyUnionFind(set);
+        ExtendedUF uf = new ExtendedUF(set);
         uf.union(node1, node2);
         assertEquals(1, uf.count());
     }
@@ -28,7 +27,7 @@ public class UnionFindTest extends TestCase {
         Set<Node> set = new HashSet<Node>();
         set.add(node1);
 
-        MyUnionFind uf = new MyUnionFind(set);
+        ExtendedUF uf = new ExtendedUF(set);
 
         assertEquals(new Node("1 0 0", 3), uf.find(node1));
     }

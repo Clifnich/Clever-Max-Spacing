@@ -1,4 +1,7 @@
-package com.puzhen.maxspacing;
+package com.puzhen.maxspacing.script;
+
+import com.puzhen.maxspacing.Main;
+import com.puzhen.maxspacing.Node;
 
 import java.io.IOException;
 import java.util.Set;

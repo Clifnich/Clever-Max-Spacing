@@ -1,6 +1,7 @@
 package com.puzhen.maxspacing;
 
 import java.io.*;
+import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
         Set<Node> set = createSet("clustering_big.txt");
         System.out.println("Finish reading and parsing the data file, now union-find processing them...");
 
-        MyUnionFind uf = new MyUnionFind(set);
+        ExtendedUF uf = new ExtendedUF(set);
 
         int i = 0;
         for (Node node : set) {
@@ -31,7 +32,7 @@ public class Main {
         String line = rd.readLine();
         String[] elements = line.split(" ");
         int length = Integer.valueOf(elements[1]);
-        Set<Node> set = new MyHashSet();
+        Set<Node> set = new HashSet();
         // read and parse the data file
         while ((line = rd.readLine()) != null)
             set.add(new Node(line, length));

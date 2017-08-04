@@ -76,4 +76,14 @@ public class NodeTest extends TestCase {
         Set<Node> set = Node.generateNeighbors(new Node("1 0 0", 3));
         assertEquals(6, set.size());
     }
+
+    public void testHashCode() {
+        Node node = new Node("1 0", 2);
+        assertEquals(2, node.hashCode());
+    }
+
+    public void testHashCode1() {
+        Node node = new Node("1 1", 2);
+        assertEquals(3, node.hashCode());
+    }
 }

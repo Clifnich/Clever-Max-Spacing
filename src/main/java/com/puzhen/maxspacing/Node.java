@@ -74,6 +74,11 @@ public class Node {
         return origin;
     }
 
+    @Override
+    public int hashCode() {
+        return intValue();
+    }
+
     /**
      * This method finds all the nodes that has one or two
      * hamming distance with the given node.

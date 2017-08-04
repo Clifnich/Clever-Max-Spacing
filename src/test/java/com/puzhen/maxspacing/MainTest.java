@@ -16,4 +16,10 @@ public class MainTest extends TestCase {
         set.add(new Node("1 0", 2));
         assertTrue(set.contains(new Node("1 0", 2)));
     }
+
+    public void testStandardHashSet() {
+        Set<Node> set = new HashSet();
+        set.add(new Node("1 0", 2));
+        assertTrue(set.contains(new Node("1 0", 2)));
+    }
 }
